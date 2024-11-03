@@ -9,7 +9,7 @@ function MovieRecommendation() {
 
   useEffect(() => {
     // Fetch the movie list from Flask backend
-    axios.get('http://localhost:5000/movies')  // Adjust URL as needed
+    axios.get('https://movie-recommendation-system-miad.onrender.com/movies')  // Adjust URL as needed
       .then(response => setMovies(response.data))
       .catch(error => console.error("Error fetching movie list:", error));
   }, []);
@@ -17,7 +17,7 @@ function MovieRecommendation() {
 
   const recommends = () => {
     axios.post(
-      'http://localhost:5000/recommend',
+      'https://movie-recommendation-system-miad.onrender.com/recommend',
       { searchQuery }, // Send `movie` in the request body
       {
         headers: {
