@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 function MovieRecommendation() {
   const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
