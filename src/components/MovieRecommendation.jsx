@@ -14,7 +14,7 @@ function MovieRecommendation() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/movies')
+      .get('https://movie-recommendation-system-miad.onrender.com/movies')
       .then((response) => setMovies(response.data))
       .catch((error) => console.error('Error fetching movie list:', error));
   }, []);
@@ -22,7 +22,7 @@ function MovieRecommendation() {
   const recommends = () => {
     axios
       .post(
-        'http://localhost:5000/recommend',
+        'https://movie-recommendation-system-miad.onrender.com/recommend',
         { searchQuery },
         {
           headers: {
